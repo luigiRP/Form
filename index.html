@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/797cfd6055.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form class="container border">
+    
+        <div class="row"> 
+            <div class="col-12 border-bottom  bg-light"> 
+                <h1>Payment form example</h1>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col-7 bg-danger ml-3 my-3"> 
+                <p>Some fields are missing</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around row"> 
+            <div> 
+                <label for="card">Card #</label><br>
+                <input type="number" max="9999999999" placeholder="xxxx xxxx xxxx xxxx">
+            </div>
+            <div > 
+                <label for="CVC" class="cvc">CVC #</label><br>
+                <input type="number" max="999" placeholder="000" name="CVC"/>
+            </div>
+            <div > 
+                <label for="amount">Amount #</label><br>
+                <div class="d-flex">
+                <p>$</p><input class="amount" type="number" placeholder="1.0" step="0.01" min="0" name="amount"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-2"> 
+            <div class="col-4 offset-1">
+                <label for="fname">First Name:</label><br>
+                <input type="text"   name="fname"/>
+            </div>
+            <div class="col-4">
+                <label for="lname">Last Name :</label><br>
+                <input type="text"  name="lname"/>
+            </div>
+        </div>
+
+        <div class="row my-2"> 
+            <div class="col-4 offset-1">
+                <label for="city">City:</label><br>
+                <input type="text"   name="city"/>
+            </div>
+            <div class="col-3">
+                <label for="state">State</label><br>
+                <select name="state">
+                <option value="Madrid">Madrid</option>
+                <option value="Cataluna">Cataluna</option>
+                <option value="Saragoza">Saragoza</option>
+                <option value="Sevilla">Sevilla</option>
+                </select>
+            </div>
+
+            <div class="col-4">
+                <label for="postal" >Postal Code</label><br>
+                <input type="number" max="99999" name="postal">
+            </div>
+        </div>
+
+        <div class="row my-3 "> 
+            <div class="offset-1 col-4 bg-secondary rounded">
+                <label for="type" >We accept:</label><br>
+                <div>
+                    <input type="radio" id="contactChoice1"
+                    name="type" value="masterCard">
+                    <label for="contactChoice1"><i class="fab fa-cc-mastercard"></i></label>
+
+                    <input type="radio" id="contactChoice2"
+                    name="type" value="visa">
+                    <label for="contactChoice2"><i class="fab fa-cc-visa"></i></label>
+
+                    <input type="radio" id="contactChoice3"
+                    name="type" value="dinnersClub">
+                    <label for="contactChoice3"><i class="fab fa-cc-diners-club"></i></label>
+
+                    <input type="radio" id="contactChoice4"
+                    name="type" value="americanExpress">
+                    <label for="contactChoice4"><i class="fab fa-cc-amex"></i></label>
+                </div>
+            </div>
+            <div class="offset-1 col-6">
+                 <label for="message">Message:</label><br>
+                 <div class="d-flex flex-column">
+                 <textarea name="message"></textarea>
+                 <small>Add any notes here</small>
+                 </div>
+                 
+            </div>
+        </div>
+        <div class="row border-top"> 
+            <div class="col-12 my-2 d-flex justify-content-end">
+            <button class="btn btn-secondary">Cancel</button>
+            <input type="submit" value="Send" class="btn btn-primary ml-2">
+            <div>
+        </div>
+    
+    </form>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>
